@@ -6,10 +6,12 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  <%= button_to "Sign Up/Login", action: "new_user_path" %>
+  
   
   %body
     %h1.title Rotten Potatoes!
+    
+    - <%= button_to "Sign Up/Login", action: "new_user_path" %>
     #main
       - if flash[:notice]
         #notice.message= flash[:notice]

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def create
         
-        if(User.exists?(user_id: [@user.user_id]))
+        if(User.exists?(user_id: [params.user_id]))
           flash[:notice] = "Sorry, this user-id is taken. Try again."
           redirect_to new_user_path
         else

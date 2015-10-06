@@ -8,8 +8,11 @@ class UsersController < ApplicationController
   end
 
   def create
+    
+        User.exists?(user_id: [@user.user_id])
         @user = User.create(user_params)
-        flash[:notice] = "Welcome #{@user.user_id} Your account has been created"
+        @testVar=User.exists?(user_id: [@user.user_id])
+        flash[:notice] = "Welcome #{@testVar} Your account has been created"
         redirect_to movies_path
   end
 end

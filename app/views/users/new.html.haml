@@ -2,13 +2,10 @@
 
 = form_tag users_path do
 
-  = label :user, :title, 'User-ID'
-  = text_field :user, 'title'
+  = label :user, :user_id, 'User-ID'
+  = text_field :user, 'user_id'
 
-  = label :user, :rating, 'Rating'
-  = select :user, :rating, ['G','PG','PG-13','R','NC-17']
-
-  = label :user, :release_date, 'Released On'
-  = date_select :user, :release_date
+  = label :user, :email, 'Email'
+  = text_field :user, 'email'
 
   = submit_tag 'Create my account'

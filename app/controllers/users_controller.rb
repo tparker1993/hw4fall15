@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
    
   def user_params
-    params.require(:user_id, :email)
+    params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
   
   def new
